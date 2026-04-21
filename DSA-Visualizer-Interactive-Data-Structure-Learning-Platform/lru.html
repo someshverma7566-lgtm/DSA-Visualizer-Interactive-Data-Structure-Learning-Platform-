@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LRU Cache</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/app.js"></script>
+<script defer src="js/lru.js"></script>
+
+</head>
+
+<body>
+
+<script>
+document.body.insertAdjacentHTML("afterbegin", getSidebarHTML());
+</script>
+
+<main class="main-content">
+
+<div class="page-header">
+<div>
+<h1>LRU Cache</h1>
+<p>Cache Hit / Miss Simulation</p>
+</div>
+<button class="theme-toggle">☀️</button>
+</div>
+
+<div class="glass-card">
+
+<input id="capacityInput" placeholder="Capacity">
+
+<button onclick="initCache()">Init</button>
+
+<select id="opType" onchange="toggleValueField()">
+<option value="put">PUT</option>
+<option value="get">GET</option>
+</select>
+
+<input id="keyInput" placeholder="Key">
+
+<div id="valueGroup">
+<input id="valueInput" placeholder="Value">
+</div>
+
+<button onclick="executeOp()">Execute</button>
+
+</div>
+
+<div class="glass-card">
+<div id="cacheViz" class="cache-container"></div>
+</div>
+
+<div class="glass-card">
+<div id="linkedListViz"></div>
+</div>
+
+<div id="statusBox" class="glass-card" style="display:none">
+<h3 id="statusText"></h3>
+</div>
+
+<div class="glass-card">
+<h3>Stats</h3>
+Hits: <span id="hitCount">0</span> |
+Miss: <span id="missCount">0</span> |
+Evictions: <span id="evictCount">0</span>
+</div>
+
+<div class="glass-card">
+<h3>Operations Log</h3>
+<div id="opLog"></div>
+</div>
+
+</main>
+
+</body>
+</html>

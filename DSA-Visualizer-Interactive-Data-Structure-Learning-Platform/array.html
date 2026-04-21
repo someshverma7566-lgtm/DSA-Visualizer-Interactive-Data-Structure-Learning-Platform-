@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Array Operations</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/app.js"></script>
+<script defer src="js/array.js"></script>
+
+</head>
+
+<body>
+
+<script>
+document.body.insertAdjacentHTML("afterbegin", getSidebarHTML());
+</script>
+
+<main class="main-content">
+
+<div class="page-header">
+<div>
+<h1>Array Operations</h1>
+<p>Linear Search / Binary Search / Duplicates</p>
+</div>
+<button class="theme-toggle">☀️</button>
+</div>
+
+<div class="glass-card">
+
+<input id="arrayInput" placeholder="Enter array e.g. 5,3,8,2">
+
+<select id="operation" onchange="toggleTarget()">
+<option value="linear">Linear Search</option>
+<option value="binary">Binary Search</option>
+<option value="duplicates">Find Duplicates</option>
+</select>
+
+<div id="targetGroup">
+<input id="targetInput" placeholder="Target value">
+</div>
+
+<br>
+
+<label>Speed</label>
+<input type="range" id="speedSlider" min="100" max="1500" value="600">
+
+<br><br>
+
+<button id="runBtn" onclick="runArrayOp()">▶ Run</button>
+
+</div>
+
+<div class="glass-card">
+<div id="arrayViz" class="array-container"></div>
+</div>
+
+<div class="glass-card">
+<div id="stepLog"></div>
+</div>
+
+<div id="resultBox" class="glass-card" style="display:none">
+<h3 id="resultText"></h3>
+</div>
+
+</main>
+
+</body>
+</html>

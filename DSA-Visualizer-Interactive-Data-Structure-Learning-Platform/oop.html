@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OOP Concepts</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/app.js"></script>
+
+</head>
+
+<body>
+
+<script>
+document.body.insertAdjacentHTML("afterbegin", getSidebarHTML());
+</script>
+
+<main class="main-content">
+
+<div class="page-header">
+<div>
+<h1>OOP Concepts</h1>
+<p>Encapsulation, Inheritance, Polymorphism, Abstraction</p>
+</div>
+<button class="theme-toggle">☀️</button>
+</div>
+
+<div class="glass-card">
+<h2>Encapsulation</h2>
+<p>Encapsulation means binding data and methods together inside a class.</p>
+<pre>
+class Student {
+private:
+int marks;
+
+public:
+void setMarks(int m){
+marks = m;
+}
+};
+</pre>
+</div>
+
+<div class="glass-card">
+<h2>Inheritance</h2>
+<p>Inheritance allows one class to use properties of another class.</p>
+<pre>
+class Animal {
+public:
+void eat(){}
+};
+
+class Dog : public Animal {
+};
+</pre>
+</div>
+
+<div class="glass-card">
+<h2>Polymorphism</h2>
+<p>Same function behaves differently.</p>
+<pre>
+class Shape {
+public:
+virtual void draw(){}
+};
+</pre>
+</div>
+
+<div class="glass-card">
+<h2>Abstraction</h2>
+<p>Hiding implementation details.</p>
+<pre>
+class Shape {
+virtual void area() = 0;
+};
+</pre>
+</div>
+
+</main>
+
+</body>
+</html>

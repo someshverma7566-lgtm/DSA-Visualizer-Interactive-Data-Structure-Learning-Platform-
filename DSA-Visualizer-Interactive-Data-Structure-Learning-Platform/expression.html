@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expression Converter</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/app.js"></script>
+<script defer src="js/expression.js"></script>
+
+</head>
+
+<body>
+
+<script>
+document.body.insertAdjacentHTML("afterbegin", getSidebarHTML());
+</script>
+
+<main class="main-content">
+
+<div class="page-header">
+<div>
+<h1>Expression Converter</h1>
+<p>Infix → Postfix / Prefix Visualization</p>
+</div>
+<button class="theme-toggle">☀️</button>
+</div>
+
+<div class="glass-card">
+
+<input id="expressionInput" placeholder="Enter infix expression e.g. A+B*C">
+
+<select id="conversionType">
+<option value="postfix">Postfix</option>
+<option value="prefix">Prefix</option>
+</select>
+
+<br><br>
+
+<label>Speed</label>
+<input type="range" id="speedSlider" min="100" max="1500" value="600">
+
+<br><br>
+
+<button id="runBtn" onclick="runConversion()">▶ Run Conversion</button>
+
+</div>
+
+<div class="glass-card">
+<h3>Current Character: <span id="currentChar">-</span></h3>
+<h3>Output: <span id="outputDisplay">-</span></h3>
+</div>
+
+<div class="glass-card">
+<div id="stackViz" class="stack-container">
+<div style="color:var(--text-muted);font-size:13px;">Empty</div>
+</div>
+</div>
+
+<div class="glass-card">
+<div id="stepLog"></div>
+</div>
+
+<div id="resultBox" class="glass-card" style="display:none">
+<h3 id="resultText"></h3>
+</div>
+
+</main>
+
+</body>
+</html>
